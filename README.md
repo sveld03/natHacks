@@ -20,7 +20,7 @@
 - contains a yellow, cylindrical tube of chapstick
 - associated with the yellow, circular button
 
-#### GUI
+##### GUI
 - once initiated, the GUI will display a black screen for 3 seconds
 - the GUI will then randomly display one of the following images for 0.5 seconds:
     - an image of a blue square
@@ -29,7 +29,7 @@
 - the user will then react as rapidly as possible to press the physical button corresponding to the image displayed on screen
 - the process then repeats for the desired number of iterations
 
-#### Data Collection
+##### Data Collection
 - the user will wear an EEG headset while engaging with the truth elicitor
 - when a particular image is shown to the user, the EEG response to that image will be recorded and associated with that image
 - the average EEG response to each image will be accumulated and averaged over time for analysis
