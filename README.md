@@ -36,3 +36,4 @@
 
 ##### EEG Configuration
 - CH1-C3, CH2-Cz, CH3-C4, CH4-P3, CH5-Pz, CH6-P4, CH7-O1, CH8-O2
+- 4th order butterworth bandpass filter between 0.1 Hz and 12.5 Hz
