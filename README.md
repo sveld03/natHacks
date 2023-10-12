@@ -33,3 +33,6 @@
 - the user will wear an EEG headset while engaging with the truth elicitor
 - when a particular image is shown to the user, the EEG response to that image will be recorded and associated with that image
 - the average EEG response to each image will be accumulated and averaged over time for analysis
+
+##### EEG Configuration
+- CH1-C3, CH2-Cz, CH3-C4, CH4-P3, CH5-Pz, CH6-P4, CH7-O1, CH8-O2
