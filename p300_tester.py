@@ -5,6 +5,8 @@ import csv
 frequency = 2500  # Set Frequency To 2500 Hertz
 duration = 150  # Set Duration To 1000 ms == 1 second
 
+#        cyton.write_command("x1050110X")
+
 
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
@@ -88,7 +90,7 @@ while count < ntrials*3:
             
 print(c_tracker)
             
-with open('color_tracker4.csv', 'w', encoding='UTF8', newline='') as f:
+with open('c_Steven2.csv', 'w', encoding='UTF8', newline='') as f:
     writer = csv.writer(f)
     # write the data
     writer.writerows([c_tracker])

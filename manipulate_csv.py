@@ -10,7 +10,7 @@ import csv
 import matplotlib.pyplot as plt
 import scipy.signal as sig
 
-csvfile = np.loadtxt("Steven1b.csv", delimiter=',', skiprows=1)
+csvfile = np.loadtxt("Steven2.csv", delimiter=',', skiprows=1)
 
 # cum_signal = np.zeros((500, 8))
 # for i in range(28500):
@@ -34,5 +34,10 @@ bpfilt = sig.butter(4, (0.1, 12.5), 'bandpass', output='sos', fs=250)
 for ch in range(8):        
     cum_signal[:,ch] = sig.sosfilt(bpfilt, cum_signal[:,ch]);
 
+plt.subplot(311);
+plt.plot(range(0, 2000, 4), cum_signal[:,0:3])
+plt.subplot(312);
+plt.plot(range(0, 2000, 4), cum_signal[:,3:6])
+plt.subplot(313);
 plt.plot(range(0, 2000, 4), cum_signal[:,6:])
 #plt.plot(range(0, 2000, 4), cum_signal)

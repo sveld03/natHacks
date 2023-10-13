@@ -21,7 +21,8 @@ def Start():
     sampling_rate = 250;
         
     # Sample scaling    
-    SCALE_FACTOR_EEG = (4500000)/24/(2**23-1); #uV/count
+    # SCALE_FACTOR_EEG = (4500000)/24/(2**23-1); #uV/count
+    SCALE_FACTOR_EEG = (4500000)/12/(2**23-1); #uV/count
     SCALE_FACTOR_AUX = 0.002 / (2**4);
     
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
@@ -132,15 +133,11 @@ def Start():
             current_sample_trigger = np.float32(sample.aux_data[1]-256)
 
             res[0:8] = current_sample_EEG;
-            res[8] = current_sample_trigger;
-            
-            if(res[8] != 0 and res[8]!=1):
-                print(res[8])
-                        
+            res[8] = current_sample_trigger;                                    
             chunk[chunk_ind,:] = res;
+            
             chunk_ind += 1;
             if(chunk_ind==500):
-                print(chunk[0,8])
                 stream_outlet.push_chunk(chunk.tolist());         
                 chunk_ind = 0;
                 print("chunk sent")
@@ -165,12 +162,21 @@ def Start():
                   
         # Configure the board into digital read mode
         print("Configuring Cyton...");
+        cyton.write_command('/d');
+        cyton.write_command("x1050110X")
+        cyton.write_command("x2050110X")
+        cyton.write_command("x3050110X")
+        cyton.write_command("x4050110X")
+        cyton.write_command("x5050110X")
+        cyton.write_command("x6050110X")
+        cyton.write_command("x7050110X")
+        cyton.write_command("x8050110X")
         cyton.write_command('/3');
         print("Cyton ready.");
         
         # Initialize LSL stream
         print("Opening EEG outlet...");
-        stream_info = StreamInfo("Packaged_EEG", "Packaged_EEG", 9, 250, "float32", "Cyton_Data_Packager3333");
+        stream_info = StreamInfo("Packaged_EEG", "Packaged_EEG", 9, 250, "float32", "Cyton_Data_Packager");
         stream_outlet = StreamOutlet(stream_info);
         print("EEG outlet opened.");
     

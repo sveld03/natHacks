@@ -54,7 +54,7 @@ except KeyboardInterrupt:
         #print(chunk)                
         saved_eeg_data[reg_ind:reg_ind+np.shape(chunk)[0]] = np.array(chunk)[:,0:8]
                 
-    with open('Steven1.csv', 'w', encoding='UTF8', newline='') as f:
+    with open('Steven2.csv', 'w', encoding='UTF8', newline='') as f:
         writer = csv.writer(f)
         # write the data
         writer.writerow(header)
