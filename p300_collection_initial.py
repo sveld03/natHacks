@@ -11,7 +11,7 @@ from matplotlib import pyplot as plt
 from pylsl import StreamInlet, resolve_stream, resolve_byprop
 
 print("looking for an EEG stream")
-stream = resolve_byprop('source_id', 'Cyton_Data_Packager3333')
+stream = resolve_byprop('source_id', 'Cyton_Data_Packager')
 print("Got stream!")
 
 # create new inlet to read from stream
@@ -33,25 +33,28 @@ try:
             
             sample, _ = inlet.pull_sample()
                    
-            print(sample[8])
-            
             if sample[8] == 1:
                 aux_received = True
+                print("Prog pressed")
             
         if aux_received:
                         
             chunk, _ = inlet.pull_chunk()
             
             if len(chunk) > 0:
-                #print(chunk)
-                #print(np.shape(chunk))
-                
+                #print(chunk)                
                 saved_eeg_data[reg_ind:reg_ind+np.shape(chunk)[0]] = np.array(chunk)[:,0:8]
                 reg_ind += np.shape(chunk)[0]
         
 except KeyboardInterrupt:
-    
-    with open('sessiontest4.csv', 'w', encoding='UTF8', newline='') as f:
+                    
+    chunk, _ = inlet.pull_chunk()
+            
+    if len(chunk) > 0:
+        #print(chunk)                
+        saved_eeg_data[reg_ind:reg_ind+np.shape(chunk)[0]] = np.array(chunk)[:,0:8]
+                
+    with open('Steven1.csv', 'w', encoding='UTF8', newline='') as f:
         writer = csv.writer(f)
         # write the data
         writer.writerow(header)
