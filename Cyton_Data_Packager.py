@@ -18,7 +18,7 @@ from pylsl import StreamInfo, StreamOutlet;
 def Start():
           
     # The sampling rate of the Cyton board, in Hz
-    sampling_rate = 250;
+    sampling_rate = 250
         
     # Sample scaling    
     # SCALE_FACTOR_EEG = (4500000)/24/(2**23-1); #uV/count
