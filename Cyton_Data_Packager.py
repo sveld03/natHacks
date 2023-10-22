@@ -158,7 +158,7 @@ def Start():
         
         # Connect to bluetooth dongle on COM port 3
         print("Connecting to Cyton...");
-        cyton = OpenBCICyton(port='COM3');
+        cyton = OpenBCICyton(port='COM5');
                   
         # Configure the board into digital read mode
         print("Configuring Cyton...");

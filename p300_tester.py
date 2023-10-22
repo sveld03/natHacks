@@ -1,7 +1,7 @@
 experimentnumber = "5.csv"
 subjectname = "StevenColor"
 filename = subjectname + experimentnumber
-ntrials = 50
+ntrials = 80
 
 if __name__ == "__main__":
 

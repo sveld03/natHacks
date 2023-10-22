@@ -3,10 +3,10 @@ import csv
 import matplotlib.pyplot as plt
 import scipy.signal as sig
 
-ntrials=10
+ntrials=80
 
-csvfile = np.loadtxt("StevenEEG5.csv", delimiter=',', skiprows=1)
-labels = np.loadtxt("StevenColor5.csv", delimiter=',')
+csvfile = np.loadtxt("MateoEEG1.csv", delimiter=',', skiprows=1)
+labels = np.loadtxt("MateoColor5.csv", delimiter=',')
 labels = labels.astype(int)
 
 # cum_signal = np.zeros((500, 8))

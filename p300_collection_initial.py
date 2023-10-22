@@ -5,8 +5,8 @@ Spyder Editor
 This is a temporary script file.
 """
 
-experimentnumber = "5.csv"
-subjectname = "StevenEEG"
+experimentnumber = "1.csv"
+subjectname = "MateoEEG"
 filename = subjectname + experimentnumber
 
 from p300_tester import ntrials
