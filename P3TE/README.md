@@ -1,22 +1,22 @@
 ## Checklist to run data collection:
 
-##### 1. Connect OpenBCI USB Dongle and figure out which COM port it is connected to.
-###### The COM port changes depending on which usb slot the Cyton is plugged into.
-##### 2. Connect the Cyton & OpenBCI cap to the subject and test signal quality using OpenBCI GUI.
-###### If signals are constantly railing, see if changing the gain from x24 (default) to x12 helps (first try to succeed w/ x24).
-##### 3. Close OpenBCI GUI after clean signals are obtained to free up the Cyton's COM port.
-##### 4. Plug in the FTDI via USB-B cable (If the GUI is ).
-###### The GUI will connect to the first FTDI device it finds and will print the ID of the device.
-###### If the device description is 'FT231X USB UART' instead of 'UM232R USB <-> Serial':
-####### Then the GUI has connected to the Cyton (which is, annoyingly, also an FTDI device). Try switching the USB ports each device is plugged into.
-###### If the GUI says DEVICE_NOT_FOUND:
-####### Then the FTDI is not plugged in correctly, or you need to simply unplug everything and then plug back in to refresh the connection sockets.
-##### 5. Connect the 4 wires that are disconnected after each use (*FUCKING THIS UP IS VERY BAD*).
+##### 1. Connect the 4 wires that are disconnected after each use (*FUCKING THIS UP IS VERY BAD*).
 ###### Red wire --> Connects from DVDD of the Cyton to the positive rail on the breadboard where two 1M-ohm resistors are attached.
 ###### Blue wire --> Connects from GND (the GND *NEXT* to DVDD, not the GND next to VDD) to the negative rail on the breadboard with the orange and yellow wires in it.
 ###### Orange wire --> Connects from pin D12 on the Cyton to the unconnected end of the 1K-ohm resistor attached to the photocoupler with orange wires going into it.
 ###### Yellow wire --> Connects from pin D11 on the Cyton to the unconnected end of the 1K-ohm resistor attached to the photocoupler with yellow wires going into it.
 ###### If anything seems out of whack, carefully consult with the pictures in the folder: "circuit_pics"
+##### 2. Connect OpenBCI USB Dongle and figure out which COM port it is connected to.
+###### The COM port changes depending on which usb slot the Cyton is plugged into.
+##### 3. Connect the Cyton & OpenBCI cap to the subject and test signal quality using OpenBCI GUI.
+###### If signals are constantly railing, see if changing the gain from x24 (default) to x12 helps (first try to succeed w/ x24).
+##### 4. Close OpenBCI GUI after clean signals are obtained to free up the Cyton's COM port.
+##### 5. Plug in the FTDI via USB-B cable (If the GUI is ).
+###### The GUI will connect to the first FTDI device it finds and will print the ID of the device.
+###### If the device description is 'FT231X USB UART' instead of 'UM232R USB <-> Serial':
+####### Then the GUI has connected to the Cyton (which is, annoyingly, also an FTDI device). Try switching the USB ports each device is plugged into.
+###### If the GUI says DEVICE_NOT_FOUND:
+####### Then the FTDI is not plugged in correctly, or you need to simply unplug everything and then plug back in to refresh the connection sockets.
 ##### 6. Open P3TE_Static_Variables.py
 ###### Ensure the com_port and gain_code match with the your setup.
 ##### 7. Before EACH trial ensure the static experiment variables match your experiment:
