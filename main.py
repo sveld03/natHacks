@@ -1,1 +1,0 @@
-# natHacks initial commit
