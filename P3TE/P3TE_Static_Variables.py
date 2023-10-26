@@ -1,7 +1,7 @@
 # Hardware parameters
 
     # This must match the COM port you have the OpenBCI usb dongle plugged into
-com_port = 'COM4';
+com_port = 'COM3';
 
     # Cyton board gain (all channels currently set to same gain bc I'm lazy)
     #TODO: consider not being lazy here :)
