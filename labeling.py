@@ -6,7 +6,7 @@ import scipy.signal as sig
 ntrials=80
 
 csvfile = np.loadtxt("MateoEEG1.csv", delimiter=',', skiprows=1)
-labels = np.loadtxt("MateoColor5.csv", delimiter=',')
+labels = np.loadtxt("MateoColor1.csv", delimiter=',')
 labels = labels.astype(int)
 
 # cum_signal = np.zeros((500, 8))

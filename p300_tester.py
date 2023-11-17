@@ -1,7 +1,7 @@
-experimentnumber = "5.csv"
+experimentnumber = "7-Yellow.csv"
 subjectname = "StevenColor"
 filename = subjectname + experimentnumber
-ntrials = 80
+ntrials = 100
 
 if __name__ == "__main__":
 
