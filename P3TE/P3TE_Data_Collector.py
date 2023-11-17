@@ -35,6 +35,7 @@ try:
         if start_signal_received:
                         
             chunk, _ = inlet.pull_chunk()
+            print(np.shape(chunk))
             
             if len(chunk) > 0:
 
@@ -50,6 +51,7 @@ except KeyboardInterrupt:
             
     # Pull in one extra chunk if there was a keyboard interrupt        
     chunk, _ = inlet.pull_chunk()
+    print(np.shape(chunk) + " inside loop")
             
     if len(chunk) > 0:
         saved_eeg_data[sample_index:sample_index+np.shape(chunk)[0]] = np.array(chunk)

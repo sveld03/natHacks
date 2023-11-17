@@ -16,8 +16,8 @@ gain_code = 5;
 
 
 # Experiment Parameters
-subject = "Test";
-n_trials = 2;
+subject = "Mateo";
+n_trials = 30;
 n_images = 10;
 down_time = 1300;
 flash_time = 700;

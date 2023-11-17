@@ -12,7 +12,7 @@ target_image_id = 3;
 response_length = sampling_frequency * 2;
 
 # Pull label data
-label_file = "trial_data\Test_0_labels_faces_(2_trials)(10_images)(1300_downTime)(700_flashTime).csv";
+label_file = "C:\\Users\\sveld\\Downloads\\Code\\natHacks\\natHacks\\P3TE\\trial_data\\Test_0_labels_faces_(2_trials)(10_images)(1300_downTime)(700_flashTime).csv";
 labels = (np.loadtxt(label_file, delimiter=',')).astype(int);
 
 # Extract trial parameters
@@ -21,7 +21,7 @@ n_flashes = int(len(labels));
 n_trials = int(n_flashes/n_images);
 
 # Pull sample data
-data_file = "trial_data\Test_0_data_faces_(2_trials)(10_images)(1300_downTime)(700_flashTime).csv";
+data_file = "C:\\Users\\sveld\\Downloads\\Code\\natHacks\\natHacks\\P3TE\\trial_data\\Test_0_data_faces_(2_trials)(10_images)(1300_downTime)(700_flashTime).csv";
 samples = np.loadtxt(data_file, delimiter=',', skiprows=1);
 
 # Init filter
