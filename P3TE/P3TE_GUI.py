@@ -7,7 +7,7 @@ import csv
 
 # Attempt to grab the FTDI device
 import ftd2xx as ftd; # Communicating the the UM232R FTDI chip for triggering
-d = ftd.open(1);
+d = ftd.open(0);
 print(d.getDeviceInfo());
 OP = 0x03;           # Bit mask for output D0 & D1
 d.setBitMode(OP, 1);  # Set pin as output, and async bitbang mode
@@ -18,7 +18,7 @@ print("FTDI initialized.");
 # Load flash images
 images = [None] * n_images;
 for image_id in range(n_images):
-    images[image_id] = pygame.image.load('C:\\Users\\sveld\\Downloads\\Code\\natHacks\\natHacks\\P3TE\\images\\image_'+str(image_id)+'.png')
+    images[image_id] = pygame.image.load('images/image_'+str(image_id)+'.png')
 
 frequency = 2500  # Set Starting Frequency To 2500 Hertz
 beep_duration = 150; # ms

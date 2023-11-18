@@ -1,7 +1,7 @@
 # Hardware parameters
 
     # This must match the COM port you have the OpenBCI usb dongle plugged into
-com_port = 'COM3';
+com_port = 'COM4';
 
     # Cyton board gain (all channels currently set to same gain bc I'm lazy)
     #TODO: consider not being lazy here :)
@@ -16,8 +16,8 @@ gain_code = 5;
 
 
 # Experiment Parameters
-subject = "Mateo";
-n_trials = 30;
+subject = "Test";
+n_trials = 2;
 n_images = 10;
 down_time = 1300;
 flash_time = 700;
